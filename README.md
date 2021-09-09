@@ -1,1 +1,1 @@
-# javascriptPassowrdGenerator
+# javascriptPasswordGenerator
