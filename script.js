@@ -44,7 +44,7 @@ function writePassword() {
     //Iterate over the length
     for (i=0;i < length; i++) {
         //Will randomly generate a value between 1 and 3
-        const r = (Math.floor(Math.random() * 3)+1)
+        const r = (Math.floor(Math.random() * 4))
         
         if (lowerCase && r===0) {
             password += generateRandomLower();
