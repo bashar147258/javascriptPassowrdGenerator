@@ -6,33 +6,48 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>Password Generator</title>
         <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
         
     </head>
-    <header>
-        <H1>Password Generator</H1>
-    </header>
+
     <body>
-        <!--Theme Selector-->
-        <div class="theme-switch-wrapper">
-            <h4> Enable Dark Mode </h4>
-            <label class="theme-switch" for="checkbox">
-                <input type="checkbox" id="checkbox">
-                <span class="slider round"></span>
-            </label>
-        </div>
-
-        <!--Main Password generator box-->
         <div class = "container">
-            <!--Generated password goes here-->
+            <header>
+                <H3>Password Generator</H3>
+            </header>
             <div class="pasword-container">
-                <input type="text" id="password">
-                <button class="show" id="show"></button>
-                <button class="copy" id="copy"></button>
+                <span id="password">
             </div>
-            <!--Password Parameters-->
-
+            <div class="option">
+                <label>Number Of Characters</label>
+                <input type="range" min="8" max="128" value="8" id="passLen" class="range-slider">
+                <input type="number" min="8" max="128" value="8" id="passLenNum" class="number-input">
             </div>
-
+            <div class="option">
+                <label class="toggle-switch">Include Lowercase Characters</label>
+                <input type="checkbox" id="lowercase" checked>
+                <span class="checkmark"></span>
+            </div>
+            <div class="option">
+                <label class="toggle-switch">Include Uppercase Characters</label>
+                <input type="checkbox" id="uppercase">
+                <span class="checkmark"></span>
+            </div>
+            <div class="option">
+                <label class="toggle-switch">Include Numeric Characters</label>
+                <input type="checkbox" id="numbers">
+                <span class="checkmark"></span>
+            </div>
+            <div class="option">
+                <label class="toggle-switch">Include Special Characters</label>
+                <input type="checkbox" id="special">
+                <span class="checkmark"></span>
+            </div>
+            <button class="btn" id="generate">
+                Generate Password
+            </button>
         </div>
-        <script src="script.js"></script>
     </body>
+    <script src="script.js"></script>
+</html>
